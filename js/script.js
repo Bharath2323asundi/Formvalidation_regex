@@ -31,7 +31,7 @@ userName.addEventListener('input',function(e) {
 /*  for password */
 password.addEventListener('input',function(e) {
 
-    var regex = /^[A-Za-z\d@$!%*?&]{8}$/;
+    var regex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*["!@#$%^&*()_"]).{8}$/;
     var currentValue =e.target.value;
 
     var res = regex.test(currentValue);
